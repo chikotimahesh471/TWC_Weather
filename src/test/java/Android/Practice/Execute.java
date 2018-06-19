@@ -1,9 +1,15 @@
 package Android.Practice;
 
 import org.testng.annotations.Test;
+import java.awt.Dimension;
+import java.awt.List;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,14 +20,14 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class Execute {
-	@BeforeTest
-	public static void beforeTest() {
-		System.out.println("========================================");
-	}
-  @Test
-  public void function() throws Exception {
-
+public class twcAppLaunch {
+@BeforeTest
+public static void beforeTest() {
+	System.out.println("========================================");
+}
+	
+	@Test
+	public static <WebElement> void runTest() throws MalformedURLException, Exception {
 		// TODO Auto-generated method stub
 
 	DesiredCapabilities caps=new DesiredCapabilities();
@@ -125,8 +131,8 @@ break;
 		System.out.println("failed");
 	}
 	Thread.sleep(2000);
-d.close();	
+d.quit();
 System.out.println("driver closed");
-	
-  }
+	}
+
 }
