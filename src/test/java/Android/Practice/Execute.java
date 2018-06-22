@@ -126,7 +126,7 @@ break;
 		System.out.println("failed");
 	}
 	Thread.sleep(2000);
-d.close();	
+d.quit();	
 System.out.println("driver closed");
 	
   }
